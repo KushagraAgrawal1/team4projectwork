@@ -1,11 +1,19 @@
 import React from 'react';
 import ProjectShowcase from './components/ProjectShowcase';
+import Footer from './components/Footer';
 function App() {
     return (
- <div className="min-h-screen bg-blue-50 p-6">
-  <h1 className="text-4xl font-bold text-center mb-6">Project ShowCase</h1>
-  <ProjectShowcase />
-</div>
+<>
+  <div className="min-h-screen bg-blue-50 p-6">
+    <h1 className="sticky top-0 z-10 bg-blue-50 text-4xl font-bold text-center mb-6 py-4">
+  Project ShowCase
+</h1>
+    <ProjectShowcase />
+  </div>
+  
+  <Footer />
+</>
+
 
   );
 }

@@ -7,6 +7,7 @@ const dummyProjects = [
     title: "AI Chatbot",
     projectType:"Uptoskills Company Project",
     description: "Built with Python and TensorFlow.",
+    github: "https://github.com/kushagra/project",
     domain: "Ai/ML",
     type: "Group",
     difficulty: "Medium",
@@ -17,6 +18,7 @@ const dummyProjects = [
     title: "Portfolio Website",
     projectType:"Open Source",
     description: "Show Candidate's profile using React and TailwindCSS.",
+    github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Individual",
     difficulty: "Easy",
@@ -26,6 +28,7 @@ const dummyProjects = [
     title: "Airbnb Clone",
     projectType:"Open Source",
     description: "Made using React,Nodejs and TailwindCSS.",
+    github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Individual",
     difficulty: "Easy",
@@ -35,6 +38,7 @@ const dummyProjects = [
     title: "Netflix Clone",
     projectType:"Open Source",
     description: "Made using React,Nodejs and TailwindCSS.",
+    github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Group",
     difficulty: "Medium",
@@ -44,6 +48,7 @@ const dummyProjects = [
     title: "Resume Builder",
     projectType:"Open Source",
     description: "Made using React.",
+    github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Group",
     difficulty: "Easy",
@@ -53,6 +58,7 @@ const dummyProjects = [
     title: "Hack Prevention",
     projectType:"Open Source",
     description: "Prevent hacking activities using cryptography.",
+    github: "https://github.com/kushagra/project",
     domain: "Cyber",
     type: "Group",
     difficulty: "Easy",
@@ -62,6 +68,7 @@ const dummyProjects = [
     title: "ChatGPT Clone",
     projectType:"Open Source",
     description: "Generative AI built using HTML,CSS,Javascript.",
+    github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Group",
     difficulty: "Hard",
@@ -71,6 +78,7 @@ const dummyProjects = [
     title: "IoT Plant Monitor",
     projectType:"Open Source",
     description: "Monitors soil moisture and temp using NodeMCU.",
+    github: "https://github.com/kushagra/project",
     domain: "IoT",
     type: "Group",
     difficulty: "Hard",
@@ -80,6 +88,7 @@ const dummyProjects = [
     title: "IoT Water Purifier",
     projectType:"Open Source",
     description: "Purifies Water with Advanced Techniques.",
+    github: "https://github.com/kushagra/project",
     domain: "IoT",
     type: "Group",
     difficulty: "Hard",
@@ -118,11 +127,12 @@ const ProjectShowcase = () => {
     <div className="max-w-6xl mx-auto">
       <h3 className="text-2xl  mb-6 text-center">Here you will find the list of company-led or open source projects student have contributed!</h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {/* Domain Filter */}
         <select
           onChange={(e) => handleFilter("domain", e.target.value)}
-          className="border p-2 rounded"
+          className="border px-2 py-1 text-sm rounded-md bg-white shadow-sm w-32"
+
         >
           <option value="All">All Domains</option>
           <option value="Web">Web</option>
@@ -134,7 +144,8 @@ const ProjectShowcase = () => {
         {/* Team/Individual Filter */}
         <select
           onChange={(e) => handleFilter("type", e.target.value)}
-          className="border p-2 rounded"
+          className="border px-2 py-1 text-sm rounded-md bg-white shadow-sm w-32"
+
         >
           <option value="All">All Types</option>
           <option value="Individual">Individual</option>
@@ -144,7 +155,8 @@ const ProjectShowcase = () => {
         {/* Difficulty Filter */}
         <select
           onChange={(e) => handleFilter("difficulty", e.target.value)}
-          className="border p-2 rounded"
+          className="border px-2 py-1 text-sm rounded-md bg-white shadow-sm w-32"
+
         >
           <option value="All">All Difficulties</option>
           <option value="Easy">Easy</option>
