@@ -16,7 +16,7 @@ const ProjectModal = ({ project, onClose }) => {
 </a>
 
 
-        <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+        <h2 className="text-xl font-bold mb-2 text-center">{project.title}</h2>
         <h2 className="text-xl mb-2">{project.projectType}</h2>
         <p className="text-sm text-gray-700 mb-4">{project.description}</p>
            {/* GitHub Link Button */}
@@ -24,7 +24,7 @@ const ProjectModal = ({ project, onClose }) => {
       href={project.github || "https://github.com/dummy-project-link"}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-white bg-black px-3 py-1 rounded hover:bg-gray-800 text-sm"
+      className="text-white bg-black px-3 py-1 rounded hover:bg-gray-800 text-sm text-center"
     >
       View on GitHub
     </a>
