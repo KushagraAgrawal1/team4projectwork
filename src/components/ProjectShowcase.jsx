@@ -12,6 +12,7 @@ const dummyProjects = [
     type: "Group",
     difficulty: "Medium",
     contributors: ["Kushagra", "Shikhar", "Akshit"],
+    image:"https://cdn-icons-png.freepik.com/512/1698/1698535.png"
   },
   {
     title: "Portfolio Website",
@@ -22,6 +23,7 @@ const dummyProjects = [
     type: "Individual",
     difficulty: "Easy",
     contributors: ["Kushagra"],
+    image:"https://cdn-icons-png.freepik.com/256/7867/7867446.png?semt=ais_hybrid"
   },
   {
     title: "Airbnb Clone",
@@ -32,6 +34,7 @@ const dummyProjects = [
     type: "Individual",
     difficulty: "Easy",
     contributors: ["Kushagra"],
+    image:"https://img.freepik.com/premium-vector/bubbly-stays-vector-icon-airbnb_720724-3093.jpg"
   },
   {
     title: "Netflix Clone",
@@ -41,7 +44,8 @@ const dummyProjects = [
     domain: "Web",
     type: "Group",
     difficulty: "Medium",
-    contributors: ["Kushagra", "Nandani", "Jahnavi", "Nitu"],
+    contributors: ["Kushagra", "Nandani", "Janhavi", "Nitu"],
+    image:"https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"
   },
   {
     title: "Resume Builder",
@@ -52,6 +56,7 @@ const dummyProjects = [
     type: "Group",
     difficulty: "Easy",
     contributors: ["Kushagra", "Harnish"],
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhcP_S0nBLZhsn6wn4LftrklqpArQLFh_49g&s"
   },
   {
     title: "Hack Prevention",
@@ -61,7 +66,8 @@ const dummyProjects = [
     domain: "Cyber",
     type: "Group",
     difficulty: "Easy",
-    contributors: ["Nandani", "Jahanvi", "Kushagra"],
+    contributors: ["Nandani", "Janhavi","Nitu" ,"Kushagra"],
+    image:"https://www.shutterstock.com/shutterstock/photos/758748727/display_1500/stock-vector-stop-hacker-ransomware-forbidden-signal-icon-on-white-background-vector-illustration-cybercrime-758748727.jpg"
   },
   {
     title: "ChatGPT Clone",
@@ -72,6 +78,7 @@ const dummyProjects = [
     type: "Group",
     difficulty: "Hard",
     contributors: ["Kushagra", "Harnish"],
+    image:"https://img.icons8.com/?size=512&id=kTuxVYRKeKEY&format=png"
   },
   {
     title: "IoT Plant Monitor",
@@ -82,6 +89,7 @@ const dummyProjects = [
     type: "Group",
     difficulty: "Hard",
     contributors: ["Shikhar", "Rizwan", "Kushagra"],
+    image:"https://play-lh.googleusercontent.com/0iQhGlgBmUqD_CJ1sglSdppVocP0_VXruGrE5nitXotFqlZosvZcJqF_AmgFsmh-W6Q=w240-h480-rw"
   },
   {
     title: "IoT Water Purifier",
@@ -92,6 +100,7 @@ const dummyProjects = [
     type: "Group",
     difficulty: "Hard",
     contributors: ["Shikhar", "Rizwan", "Kushagra"],
+    image:"https://cdn-icons-png.flaticon.com/512/4992/4992693.png"
   },
 ];
 
