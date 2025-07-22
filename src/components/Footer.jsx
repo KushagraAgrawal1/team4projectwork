@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import uptoskillsLogo from "../assets/uptoskills-logo.png"; // Import the logo
 
 const Footer = () => {
   return (
@@ -14,7 +15,13 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h2 className="text-2xl font-bold text-orange-400">Upto<span className="text-green-400">Skills</span></h2>
+            <div className="p-4 border-b border-gray-700 flex justify-start">
+                <img
+                    src={uptoskillsLogo}
+                    alt="Uptoskills Logo"
+                    className="h-12 w-auto object-contain"
+                  />
+            </div>
           <p className="mt-4"><span className="font-bold text-red-400">Address:</span> Pune, Maharashtra, 411045</p>
           <p className="mt-2"><span className="font-bold text-red-400">Email:</span> info@uptoskills.com</p>
           <p className="mt-2"><span className="font-bold text-red-400">Phone:</span> +91-9056734281</p>
@@ -30,7 +37,7 @@ const Footer = () => {
 
         {/* Quick Links */}
          <div>
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+          <h3 className="relative inline-block text-xl font-semibold text-orange-400 hover:text-green-300 mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li><a href="#" className="hover:text-gray-300">About Us</a></li>
             <li><a href="#" className="hover:text-gray-300">Courses</a></li>
@@ -42,7 +49,7 @@ const Footer = () => {
 
         {/* Short Links */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Short Links</h3>
+          <h3 className="text-xl font-semibold text-orange-400 hover:text-green-300 mb-4">Short Links</h3>
           <ul className="space-y-2">
             <li><a href="#" className="hover:text-gray-300">Terms & Condition</a></li>
             <li><a href="#" className="hover:text-gray-300">Privacy Policy</a></li>
@@ -54,9 +61,9 @@ const Footer = () => {
 
         {/* Find Us Here */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Find Us Here</h3>
+          <h3 className="text-xl font-semibold text-orange-400 hover:text-green-300 mb-4">Find Us Here</h3>
           <p className="text-sm text-gray-300">We are here to help you with any queries you have.</p>
-          <button className="mt-4 bg-yellow-400 text-black px-3 py-1 rounded shadow hover:bg-yellow-300 transition-all">
+          <button className="mt-4 bg-orange-400 text-black px-3 py-1 rounded shadow hover:bg-orange-200 transition-all">
             Quick Question? We are here!
           </button>
         </div>

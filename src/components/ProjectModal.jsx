@@ -3,20 +3,20 @@ import React from "react";
 const ProjectModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center">
-      <div className="bg-white p-6 rounded shadow-lg w-[90%] max-w-md relative">
+      <div className="bg-white p-7 rounded-2xl shadow-lg w-[90%] max-w-md relative">
         <a
   href="#"
   onClick={(e) => {
     e.preventDefault();
     onClose();
   }}
-  className="absolute top-2 right-3 bg-orange-500 text-white px-3 py-1 rounded-md text-sm hover:bg-orange-600 transition duration-200"
+  className="absolute top-1 right-3 bg-orange-500 text-white px-3 py-1 rounded-md text-sm hover:bg-orange-600 transition duration-200"
 >
   Close
 </a>
 
 
-        <h2 className="text-xl font-bold mb-2 text-center">{project.title}</h2>
+        <h2 className="text-xl font-bold mb-4 text-center">{project.title}</h2>
         <h2 className="text-xl mb-2">{project.projectType}</h2>
         <p className="text-sm text-gray-700 mb-4">{project.description}</p>
            {/* GitHub Link Button */}
@@ -28,12 +28,12 @@ const ProjectModal = ({ project, onClose }) => {
     >
       View on GitHub
     </a>
-        <h3 className="font-semibold text-sm mb-1">Contributors:</h3>
-        <ul className="list-disc pl-5 text-sm text-gray-800">
+        <h3 className="font-semibold text-sm mt-2 mb-1">Contributors:</h3>
+        <ol className="list-decimal pl-5 text-sm text-gray-800">
           {project.contributors.map((name, idx) => (
             <li key={idx}>{name}</li>
           ))}
-        </ul>
+        </ol>
       </div>
     </div>
   );
