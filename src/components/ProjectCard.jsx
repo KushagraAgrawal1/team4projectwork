@@ -16,13 +16,13 @@ const ProjectCard = ({ project, onClick }) => {
       <p className="text-xl text-gray-600 mb-2 ">{project.description}</p>
 
       <div className="flex flex-wrap gap-2 text-sm ">
-        <span className="bg-gray-200 px-2 py-1 rounded">
+        <span className="bg-blue-600 px-2 py-1 rounded text-white">
           {project.domain}
         </span>
-        <span className="bg-blue-200 px-2 py-1 rounded">
+        <span className="bg-purple-600 px-2 py-1 rounded text-white">
           {project.type}
         </span>
-        <span className="bg-yellow-200 px-2 py-1 rounded ">
+        <span className="bg-pink-600 px-2 py-1 rounded  text-white">
           {project.difficulty}
         </span>
       </div>
