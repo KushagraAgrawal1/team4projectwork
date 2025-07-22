@@ -132,9 +132,12 @@ const ProjectShowcase = () => {
 
   return (
     <div className="p-4">
-      <h3 className="text-2xl mb-6 text-center">
-        Here you will find the list of company-led or open source projects students have contributed!
-      </h3>
+   <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 py-6 rounded-xl shadow-2xl mb-10 transition transform hover:scale-105 hover:shadow-3xl duration-500">
+  <h3 className="text-3xl text-white text-center font-extrabold tracking-wider animate-pulse">
+    🚀 Explore the amazing projects built by students — from open source to company-led innovations!
+  </h3>
+</div>
+
 
       {/* Filters */}
       <div className="flex flex-wrap justify-center gap-4 mb-6">

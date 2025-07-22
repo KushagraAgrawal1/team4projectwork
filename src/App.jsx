@@ -12,12 +12,16 @@ function App() {
         <Sidebar />
 
         {/* Main Content */}
-        <div className="flex-1 p-6 ">
-          <h1 className="sticky top-0 z-10 bg-slate-50 text-4xl font-bold text-center mb-8 py-6 tracking -wide text-gray-900 shadow-md border-b-3 ">
-            Project ShowCase
-          </h1>
-          <ProjectShowcase />
-        </div>
+  <div className="flex-1 p-6">
+  <h1 className="sticky top-0 z-10 bg-slate-50 text-5xl font-extrabold text-center mb-10 py-8 tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 shadow-md border-b-4 border-purple-400">
+      Project ShowCase
+  </h1>
+  <ProjectShowcase />
+</div>
+
+
+
+
       </div>
       <Footer />
     </>
