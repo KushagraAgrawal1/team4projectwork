@@ -4,13 +4,28 @@ import ProjectShowcase from './components/ProjectShowcase';
 import Footer from './components/Footer';
 
 function App() {
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true); // Toggle Sidebar if needed
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarVisible(!isSidebarVisible);
+  };
 
   return (
     <>
+      {/* Hamburger for mobile */}
+      <div className="md:hidden flex justify-between items-center p-4 bg-[#2E4053] text-white">
+        <button onClick={toggleSidebar}>
+          {/* Hamburger Icon */}
+          <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+        <span className="text-lg font-bold">Menu</span>
+      </div>
+
       <div className="flex min-h-screen bg-slate-50">
         {/* Sidebar */}
-        <Sidebar isSidebarVisible={isSidebarVisible} />
+        <Sidebar isSidebarVisible={isSidebarVisible} setIsSidebarVisible={setIsSidebarVisible} />
 
         {/* Main Content */}
         <div className="flex-1 p-6">
