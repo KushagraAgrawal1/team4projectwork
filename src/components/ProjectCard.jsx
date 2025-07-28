@@ -4,7 +4,7 @@ const ProjectCard = ({ project, onClick }) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4 cursor-pointer transition duration-300 transform hover:scale-105 hover:shadow-3xl">
 
-      {/* Project Icon Update*/}
+      {/* Project Icon */}
       {project.image && (
         <img
           src={project.image}
@@ -12,29 +12,35 @@ const ProjectCard = ({ project, onClick }) => {
           className="w-24 h-24 object-cover mb-2 mx-auto rounded-full border"
         />
       )}
-      <h2 className="text-3xl font-semibold">{project.title}</h2>
-      <p className="text-xl text-gray-600 mb-2 ">{project.description}</p>
 
-      <div className="flex flex-wrap gap-2 text-sm ">
-        <span className="bg-blue-600 px-2 py-1 rounded text-white">
-          {project.domain}
-        </span>
-        <span className="bg-purple-600 px-2 py-1 rounded text-white">
-          {project.type}
-        </span>
-        <span className="bg-pink-600 px-2 py-1 rounded  text-white">
-          {project.difficulty}
-        </span>
+      {/* Title and Description */}
+      <h2 className="text-3xl font-semibold text-center">{project.title}</h2>
+      <p className="text-xl text-gray-600 mb-2 text-center">{project.description}</p>
+
+      {/* Tags + Button Centered */}
+      <div className="flex flex-col items-center">
+        <div className="flex flex-wrap justify-center gap-2 text-sm">
+          <span className="bg-blue-600 px-2 py-1 rounded text-white">
+            {project.domain}
+          </span>
+          <span className="bg-purple-600 px-2 py-1 rounded text-white">
+            {project.type}
+          </span>
+          <span className="bg-pink-600 px-2 py-1 rounded text-white">
+            {project.difficulty}
+          </span>
+        </div>
+        <button
+          onClick={onClick}
+          className="mt-3 text-sm text-blue-600 hover:underline"
+        >
+          View Details
+        </button>
       </div>
-
-      <button
-        onClick={onClick}
-        className="mt-3 text-sm text-blue-600 hover:underline"
-      >
-        View Details
-      </button>
+      
     </div>
   );
 };
 
 export default ProjectCard;
+

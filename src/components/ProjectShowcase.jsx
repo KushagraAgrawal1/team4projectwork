@@ -6,7 +6,7 @@ const dummyProjects = [
   {
     title: "AI Chatbot",
     projectType: "Uptoskills Company Project",
-    description: "Built with Python and TensorFlow.",
+    description: "Chatbot Built with Python and TensorFlow.",
     github: "https://github.com/kushagra/project",
     domain: "Ai/ML",
     type: "Group",
@@ -50,7 +50,7 @@ const dummyProjects = [
   {
     title: "Resume Builder",
     projectType: "Open Source",
-    description: "Made using React.",
+    description: "Helps to build resumes,made using React.",
     github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Group",
