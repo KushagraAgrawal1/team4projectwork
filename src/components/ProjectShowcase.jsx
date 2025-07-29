@@ -17,7 +17,7 @@ const dummyProjects = [
   {
     title: "Portfolio Website",
     projectType: "Open Source",
-    description: "Show Candidate's profile using React and TailwindCSS.",
+    description: "Show profile using React and TailwindCSS.",
     github: "https://github.com/kushagra/project",
     domain: "Web",
     type: "Individual",
