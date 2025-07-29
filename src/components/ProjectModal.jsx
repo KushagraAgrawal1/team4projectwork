@@ -12,7 +12,7 @@ const ProjectModal = ({ project, onClose }) => {
             e.preventDefault();
             onClose();
           }}
-          className="absolute top-1 right-3 bg-blue-600 text-white px-3 py-1 rounded-md text-sm"
+          className="absolute top-1 right-3 bg-[#00b2a9]-600 text-black px-3 py-1 hover:bg-orange-500 rounded-md text-sm"
         >
           Close
         </a>
@@ -28,7 +28,7 @@ const ProjectModal = ({ project, onClose }) => {
             href={project.github || "https://github.com/dummy-project-link"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white bg-purple-600 px-4 py-2 rounded text-sm hover:bg-purple-700 transition"
+            className="text-black bg-[#00b2a9] px-4 py-2 rounded text-sm hover:bg-orange-500 transition"
           >
             View on GitHub
           </a>

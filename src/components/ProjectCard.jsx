@@ -26,13 +26,13 @@ const ProjectCard = ({ project, onClick }) => {
           <span className="bg-purple-600 px-2 py-1 rounded text-white">
             {project.type}
           </span>
-          <span className="bg-pink-600 px-2 py-1 rounded text-white">
+          <span className="bg-orange-500 px-2 py-1 rounded text-white">
             {project.difficulty}
           </span>
         </div>
         <button
           onClick={onClick}
-          className="mt-3 text-sm text-blue-600 hover:underline"
+          className="mt-3 text-sm text-#00b2a9-600 hover:text-orange-500 hover:underline"
         >
           View Details
         </button>
