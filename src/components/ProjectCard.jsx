@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectCard = ({ project, onClick }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 cursor-pointer transition duration-300 transform hover:scale-105 hover:shadow-3xl">
+    <div className="bg-white shadow-md rounded-2xl p-4 cursor-pointer transition duration-300 transform hover:scale-105 hover:shadow-3xl">
 
       {/* Project Icon */}
       {project.image && (
@@ -14,8 +14,8 @@ const ProjectCard = ({ project, onClick }) => {
       )}
 
       {/* Title and Description */}
-      <h2 className="text-3xl font-semibold text-center">{project.title}</h2>
-      <p className="text-xl text-gray-600 mb-2 text-center">{project.description}</p>
+      <h2 className="text-2xl font-semibold text-center">{project.title}</h2>
+      <p className="text-sm text-gray-600 mb-2 text-center">{project.description}</p>
 
       {/* Tags + Button Centered */}
       <div className="flex flex-col items-center">
