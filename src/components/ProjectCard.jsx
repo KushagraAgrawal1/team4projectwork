@@ -35,7 +35,7 @@ const ProjectCard = ({ project, onClick }) => {
     onClick={onClick}
     className="mt-3 text-sm font-medium hover:underline"
     style={{ color: '#00b2a9' }}
-    onMouseOver={(e) => (e.target.style.color = '#f26c3d')}
+    onMouseOver={(e) => (e.target.style.color = '#fd6c3d')}
     onMouseOut={(e) => (e.target.style.color = '#00b2a9')}
   >
     View Details
