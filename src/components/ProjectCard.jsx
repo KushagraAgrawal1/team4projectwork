@@ -9,7 +9,7 @@ const ProjectCard = ({ project, onClick }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-24 h-24 object-cover mb-2 mx-auto rounded-full border"
+          className="w-20 h-20 object-cover mb-2 mx-auto rounded-full border"
         />
       )}
 
@@ -23,7 +23,7 @@ const ProjectCard = ({ project, onClick }) => {
     <span className="px-3 py-1 rounded text-white" style={{ backgroundColor: '#00b2a9' }}>
       {project.domain}
     </span>
-    <span className="px-3 py-1 rounded text-white" style={{ backgroundColor: '#a144f2' }}>
+    <span className="px-3 py-1 rounded text-white" style={{ backgroundColor: '#f24444cc' }}>
       {project.type}
     </span>
     <span className="px-3 py-1 rounded text-white" style={{ backgroundColor: '#f26c3d' }}>

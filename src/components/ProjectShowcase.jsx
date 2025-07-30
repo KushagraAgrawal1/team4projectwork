@@ -5,6 +5,7 @@ import ProjectModal from "./ProjectModal";
 const dummyProjects = [
   {
     title: "AI Chatbot",
+    date: "2024-03-15",
     projectType: "Uptoskills Company Project",
     description: "Chatbot Built with Python and TensorFlow.",
     github: "https://github.com/kushagra/project",
@@ -13,9 +14,11 @@ const dummyProjects = [
     difficulty: "Medium",
     contributors: ["Kushagra", "Shikhar", "Akshit"],
     image:"https://cdn-icons-png.freepik.com/512/1698/1698535.png"
+    
   },
   {
     title: "Portfolio Website",
+    date: "2024-06-25",
     projectType: "Open Source",
     description: "Show profile using React and TailwindCSS.",
     github: "https://github.com/kushagra/project",
@@ -24,9 +27,11 @@ const dummyProjects = [
     difficulty: "Easy",
     contributors: ["Kushagra"],
     image:"https://cdn-icons-png.freepik.com/256/7867/7867446.png?semt=ais_hybrid"
+    
   },
   {
     title: "Airbnb Clone",
+    date: "2024-07-15",
     projectType: "Open Source",
     description: "Made using React, Nodejs and TailwindCSS.",
     github: "https://github.com/kushagra/project",
@@ -38,6 +43,7 @@ const dummyProjects = [
   },
   {
     title: "Netflix Clone",
+    date: "2024-01-11",
     projectType: "Open Source",
     description: "Made using React, Nodejs and TailwindCSS.",
     github: "https://github.com/kushagra/project",
@@ -49,6 +55,7 @@ const dummyProjects = [
   },
   {
     title: "Resume Builder",
+    date: "2024-03-25",
     projectType: "Open Source",
     description: "Helps to build resumes,made using React.",
     github: "https://github.com/kushagra/project",
@@ -60,6 +67,7 @@ const dummyProjects = [
   },
   {
     title: "Hack Prevention",
+    date: "2024-08-18",
     projectType: "Open Source",
     description: "Prevent hacking activities using cryptography.",
     github: "https://github.com/kushagra/project",
@@ -71,6 +79,7 @@ const dummyProjects = [
   },
   {
     title: "ChatGPT Clone",
+    date: "2025-02-19",
     projectType: "Open Source",
     description: "Generative AI built using HTML, CSS, Javascript.",
     github: "https://github.com/kushagra/project",
@@ -82,6 +91,7 @@ const dummyProjects = [
   },
   {
     title: "IoT Plant Monitor",
+    date: "2025-03-27",
     projectType: "Open Source",
     description: "Monitors soil moisture and temp using NodeMCU.",
     github: "https://github.com/kushagra/project",
@@ -93,6 +103,7 @@ const dummyProjects = [
   },
   {
     title: "IoT Water Purifier",
+    date: "2025-04-14",
     projectType: "Open Source",
     description: "Purifies Water with Advanced Techniques.",
     github: "https://github.com/kushagra/project",
@@ -137,9 +148,9 @@ const ProjectShowcase = () => {
       <div className="flex flex-wrap justify-center gap-4 mb-6">
         <select
           onChange={(e) => handleFilter("domain", e.target.value)}
-          className="border px-2 py-1 text-sm rounded-md bg-white shadow-sm w-36"
+          className=" bg-orange-200  px-2 py-1 text-sm rounded-lg  shadow-sm w-36"
         >
-          <option value="All">All Domains</option>
+          <option value="All" >All Domains</option>
           <option value="Web">Web</option>
           <option value="Ai/ML">AI/ML</option>
           <option value="IoT">IoT</option>
@@ -148,7 +159,7 @@ const ProjectShowcase = () => {
 
         <select
           onChange={(e) => handleFilter("type", e.target.value)}
-          className="border px-2 py-1 text-sm rounded-md bg-white shadow-sm w-36"
+          className=" bg-orange-200 border px-2 py-1 text-sm rounded-lg  shadow-sm w-36"
         >
           <option value="All">All Types</option>
           <option value="Individual">Individual</option>
@@ -157,7 +168,7 @@ const ProjectShowcase = () => {
 
         <select
           onChange={(e) => handleFilter("difficulty", e.target.value)}
-          className="border px-2 py-1 text-sm rounded-md bg-white shadow-sm w-36"
+          className=" bg-orange-200 border px-2 py-1 text-sm rounded-lg  shadow-sm w-36"
         >
           <option value="All">All Difficulties</option>
           <option value="Easy">Easy</option>

@@ -28,11 +28,20 @@ const ProjectModal = ({ project, onClose }) => {
             href={project.github || "https://github.com/dummy-project-link"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white bg-violet-500 px-4 py-2 rounded text-sm hover:bg-orange-500 transition"
+            className="text-white bg-[#00b2a9] px-4 py-2 rounded text-sm hover:bg-orange-500 transition"
           >
             View on GitHub
           </a>
         </div>
+         
+         {/* project date*/ }
+        {project.date && (
+ <p>
+    <span className="font-semibold text-sm mt-4 mb-1 ">Date:</span>
+    <span className="text-sm">{project.date}</span>
+  </p>
+   )}
+
 
         {/* Contributors List */}
         <h3 className="font-semibold  text-sm mt-4 mb-1">Contributors:</h3>
@@ -41,6 +50,7 @@ const ProjectModal = ({ project, onClose }) => {
             <li key={idx}>{name}</li>
           ))}
         </ol>
+        
       </div>
     </div>
   );
