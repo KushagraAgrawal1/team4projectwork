@@ -17,8 +17,8 @@ const ProjectModal = ({ project, onClose }) => {
           Close
         </a>
 
-        {/* Modal Content Centered */}
-        <div className="flex flex-col items-center text-center">
+        {/* Modal Content */}
+        <div className="flex flex-col text-center items-center">
           <h2 className="text-2xl text-orange-500 font-bold mb-4">{project.title}</h2>
           <h3 className="text-lg font-medium mb-2">{project.projectType}</h3>
           <p className="text-sm text-gray-700 mb-4">{project.description}</p>
@@ -32,37 +32,44 @@ const ProjectModal = ({ project, onClose }) => {
           >
             View on GitHub
           </a>
+
+          {/* Date and Duration in one line */}
+          {(project.date || project.duration) && (
+            <div className="flex justify-center gap-4 text-sm text-gray-700 mt-4">
+              {project.date && (
+                <p>
+                  <span className="font-semibold">Date:</span> {project.date}
+                </p>
+              )}
+              {project.duration && (
+                <p>
+                  <span className="font-semibold">Duration:</span> {project.duration}
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* Contributors - Centered Heading & Inline */}
+          {project.contributors && project.contributors.length > 0 && (
+            <div className="w-full mt-4 text-center">
+              <h3 className="font-semibold text-sm mb-2">Contributors</h3>
+              <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-800">
+                {project.contributors.map((name, idx) => (
+                  <span key={idx} className="bg-orange-200 px-3 py-1 rounded-full">
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-         
-         {/* project date*/ }
-        {project.date && (
- <p>
-    <span className="font-semibold text-sm mt-4 mb-1 ">Date:</span>
-    <span className="text-sm">{project.date}</span>
-  </p>
-   )}
-
-      
-         {/* project duration */}
-        {project.duration && (
- <p>
-    <span className="font-semibold text-sm mt-4 mb-1 ">Duration:</span>
-    <span className="text-sm">{project.duration}</span>
-  </p>
-   )}
-
-        {/* Contributors List */}
-        <h3 className="font-semibold  text-sm mt-4 mb-1">Contributors:</h3>
-        <ol className="list-decimal pl-5 text-sm text-gray-800">
-          {project.contributors.map((name, idx) => (
-            <li key={idx}>{name}</li>
-          ))}
-        </ol>
-        
       </div>
     </div>
   );
 };
 
 export default ProjectModal;
+
+
+
 

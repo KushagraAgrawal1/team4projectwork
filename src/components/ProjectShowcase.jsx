@@ -2,11 +2,23 @@ import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 
+ import { ChevronDown } from "lucide-react"; // make sure it's imported
+import {
+  Globe,
+  Bot,
+  Wifi,
+  ShieldCheck,
+  User,
+  Users,
+  Circle,
+  CircleDot,
+  CircleSlash,
+  SlidersHorizontal
+} from "lucide-react";
 const dummyProjects = [
   {
     title: "AI Chatbot",
     date: "2024-03-15",
-    duration: "2 weeks",
     projectType: "Uptoskills Company Project",
     description: "Chatbot Built with Python and TensorFlow.",
     github: "https://github.com/kushagra/project",
@@ -20,7 +32,6 @@ const dummyProjects = [
   {
     title: "Portfolio Website",
     date: "2024-06-25",
-    duration: "1 weeks",
     projectType: "Open Source",
     description: "Show profile using React and TailwindCSS.",
     github: "https://github.com/kushagra/project",
@@ -34,7 +45,6 @@ const dummyProjects = [
   {
     title: "Airbnb Clone",
     date: "2024-07-15",
-    duration: "4 weeks",
     projectType: "Open Source",
     description: "Made using React, Nodejs and TailwindCSS.",
     github: "https://github.com/kushagra/project",
@@ -48,7 +58,6 @@ const dummyProjects = [
     title: "Netflix Clone",
     date: "2024-01-11",
     projectType: "Open Source",
-    duration: "3 weeks",
     description: "Made using React, Nodejs and TailwindCSS.",
     github: "https://github.com/kushagra/project",
     domain: "Web",
@@ -60,7 +69,6 @@ const dummyProjects = [
   {
     title: "Resume Builder",
     date: "2024-03-25",
-    duration: "2 weeks",
     projectType: "Open Source",
     description: "Helps to build resumes,made using React.",
     github: "https://github.com/kushagra/project",
@@ -73,7 +81,6 @@ const dummyProjects = [
   {
     title: "Hack Prevention",
     date: "2024-08-18",
-    duration: "4 weeks",
     projectType: "Open Source",
     description: "Prevent hack activities using cryptography.",
     github: "https://github.com/kushagra/project",
@@ -86,7 +93,6 @@ const dummyProjects = [
   {
     title: "ChatGPT Clone",
     date: "2025-02-19",
-    duration: "2 weeks",
     projectType: "Open Source",
     description: "Generative AI built using HTML, CSS, Javascript.",
     github: "https://github.com/kushagra/project",
@@ -99,7 +105,6 @@ const dummyProjects = [
   {
     title: "IoT Plant Monitor",
     date: "2025-03-27",
-    duration: "4 weeks",
     projectType: "Open Source",
     description: "Monitors soil moisture and temp using NodeMCU.",
     github: "https://github.com/kushagra/project",
@@ -112,9 +117,8 @@ const dummyProjects = [
   {
     title: "IoT Water Purifier",
     date: "2025-04-14",
-    duration: "2 weeks",
     projectType: "Open Source",
-    description: "Purifies Water with Advanced iot technologies.",
+    description: "Purifies Water with Advanced iot tools and Techniques.",
     github: "https://github.com/kushagra/project",
     domain: "IoT",
     type: "Group",
@@ -150,62 +154,94 @@ const ProjectShowcase = () => {
     setFilters((prev) => ({ ...prev, [key]: value }));
   };
 
-  return (
-    <div className="p-4">
 
-      {/* Filters */}
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
-        <select
-          onChange={(e) => handleFilter("domain", e.target.value)}
-          className=" bg-[#dee2e6] px-2 py-1 text-sm rounded-lg  shadow-sm w-36"
-        >
-          <option value="All" >All Domains</option>
-          <option value="Web">Web</option>
-          <option value="Ai/ML">AI/ML</option>
-          <option value="IoT">IoT</option>
-          <option value="Cyber">Cyber Security</option>
-        </select>
+return (
+  <div className="px-4 py-6">
+    {/* Filter Bar */}
+    <div className="flex flex-wrap justify-center gap-6 mb-6">
+      {[
+        {
+          label: "All Domains",
+          value: "domain",
+          options: ["All", "Web", "Ai/ML", "IoT", "Cyber"],
+          icons: {
+            Web: <Globe className="inline-block w-4 h-4 mr-1" />,
+            "Ai/ML": <Bot className="inline-block w-4 h-4 mr-1" />,
+            IoT: <Wifi className="inline-block w-4 h-4 mr-1" />,
+            Cyber: <ShieldCheck className="inline-block w-4 h-4 mr-1" />,
+          },
+          icon: <Globe className="w-4 h-4" />,
+        },
+        {
+          label: "All Types",
+          value: "type",
+          options: ["All", "Individual", "Group"],
+          icons: {
+            Individual: <User className="inline-block w-4 h-4 mr-1" />,
+            Group: <Users className="inline-block w-4 h-4 mr-1" />,
+          },
+          icon: <Users className="w-4 h-4" />,
+        },
+        {
+          label: "All Difficulties",
+          value: "difficulty",
+          options: ["All", "Easy", "Medium", "Hard"],
+          icons: {
+            Easy: <Circle className="inline-block w-4 h-4 text-green-500 mr-1" />,
+            Medium: <CircleDot className="inline-block w-4 h-4 text-yellow-500 mr-1" />,
+            Hard: <CircleSlash className="inline-block w-4 h-4 text-red-500 mr-1" />,
+          },
+          icon: <SlidersHorizontal className="w-4 h-4" />,
+        },
+      ].map((filter, idx) => (
+        <div key={idx} className="relative w-44">
+          <select
+            onChange={(e) => handleFilter(filter.value, e.target.value)}
+            className="appearance-none w-full px-4 py-2 pl-10 pr-10 bg-orange-100 text-gray-800 font-semibold text-sm rounded-xl border border-orange-300 shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-200"
+          >
+            {filter.options.map((opt, i) => (
+              <option key={i} value={opt}>
+                {opt === "All" ? filter.label : opt}
+              </option>
+            ))}
+          </select>
 
-        <select
-          onChange={(e) => handleFilter("type", e.target.value)}
-          className=" bg-[#dee2e6] border px-2 py-1 text-sm rounded-lg  shadow-sm w-36"
-        >
-          <option value="All">All Types</option>
-          <option value="Individual">Individual</option>
-          <option value="Group">Group</option>
-        </select>
+          {/* Left icon */}
+          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-600 pointer-events-none">
+            {filter.icon}
+          </div>
 
-        <select
-          onChange={(e) => handleFilter("difficulty", e.target.value)}
-          className=" bg-[#dee2e6] border px-2 py-1 text-sm rounded-lg  shadow-sm w-36"
-        >
-          <option value="All">All Difficulties</option>
-          <option value="Easy">Easy</option>
-          <option value="Medium">Medium</option>
-          <option value="Hard">Hard</option>
-        </select>
-      </div>
-
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((proj, idx) => (
-          <ProjectCard
-            key={idx}
-            project={proj}
-            onClick={() => setSelectedProject(proj)}
-          />
-        ))}
-      </div>
-
-      {/* Modal */}
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
+          {/* Dropdown arrow on right */}
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-orange-600 pointer-events-none">
+            <ChevronDown className="w-4 h-4" />
+          </div>
+        </div>
+      ))}
     </div>
-  );
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {filtered.map((proj, idx) => (
+        <ProjectCard
+          key={idx}
+          project={proj}
+          onClick={() => setSelectedProject(proj)}
+        />
+      ))}
+    </div>
+
+    {/* Modal */}
+    {selectedProject && (
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+    )}
+  </div>
+);
+
+
+
 };
 
 export default ProjectShowcase;
