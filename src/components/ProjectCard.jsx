@@ -88,33 +88,18 @@ const ProjectCard = ({ project, onClick }) => {
       </div>
 
       {/* View Details Button */}
-     
-      <div className="flex justify-center mt-5">
+    <div className="flex justify-center mt-5">
   <button
     onClick={onClick}
-<<<<<<< HEAD
-    className="relative inline-flex items-center gap-2 px-5 py-1.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-orange-400 shadow-md hover:from-orange-400 hover:to-cyan-500 transition duration-300 group overflow-hidden"
-=======
-    className="mt-3 text-sm font-medium hover:underline"
-    style={{ color: '#00b2a9' }}
-    onMouseOver={(e) => (e.target.style.color = '#fd6c3d')}
-    onMouseOut={(e) => (e.target.style.color = '#00b2a9')}
->>>>>>> 2d0db716188c997b708d2b3ac211fe8587fe18ba
+    className="inline-flex items-center gap-2 px-5 py-2 rounded-md bg-gradient-to-r from-cyan-600 to-teal-500 hover:from-orange-500 hover:to-red-400 text-white font-medium text-sm transition duration-300"
   >
-    {/* Shine blur */}
-    <span className="absolute inset-0 rounded-full opacity-20 group-hover:opacity-30 bg-white blur-sm"></span>
-
-    {/* Icon and text */}
-    <span className="relative z-10 flex items-center gap-2">
-      <FiEye className="text-white text-base" />
-      View Details
-      <span className="transform translate-x-0 group-hover:translate-x-1 transition duration-300">
-        →
-      </span>
+    <FiEye className="text-base" />
+    View Details
+    <span className="transform group-hover:translate-x-1 transition-transform duration-200">
+      →
     </span>
   </button>
 </div>
-
 
     </div>
   );
