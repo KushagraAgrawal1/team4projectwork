@@ -92,7 +92,14 @@ const ProjectCard = ({ project, onClick }) => {
       <div className="flex justify-center mt-5">
   <button
     onClick={onClick}
+<<<<<<< HEAD
     className="relative inline-flex items-center gap-2 px-5 py-1.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-orange-400 shadow-md hover:from-orange-400 hover:to-cyan-500 transition duration-300 group overflow-hidden"
+=======
+    className="mt-3 text-sm font-medium hover:underline"
+    style={{ color: '#00b2a9' }}
+    onMouseOver={(e) => (e.target.style.color = '#fd6c3d')}
+    onMouseOut={(e) => (e.target.style.color = '#00b2a9')}
+>>>>>>> 2d0db716188c997b708d2b3ac211fe8587fe18ba
   >
     {/* Shine blur */}
     <span className="absolute inset-0 rounded-full opacity-20 group-hover:opacity-30 bg-white blur-sm"></span>

@@ -12,7 +12,7 @@ const ProjectModal = ({ project, onClose }) => {
             e.preventDefault();
             onClose();
           }}
-          className="absolute top-1 right-3 bg-[#00b2a9] text-black px-3 py-1 hover:bg-orange-500 rounded-md text-sm"
+          className="absolute top-1 right-3 bg-[#dee2e6] text-black px-3 py-1 hover:bg-gray-400 rounded-md text-sm"
         >
           Close
         </a>
@@ -42,6 +42,14 @@ const ProjectModal = ({ project, onClose }) => {
   </p>
    )}
 
+      
+         {/* project duration */}
+        {project.duration && (
+ <p>
+    <span className="font-semibold text-sm mt-4 mb-1 ">Duration:</span>
+    <span className="text-sm">{project.duration}</span>
+  </p>
+   )}
 
         {/* Contributors List */}
         <h3 className="font-semibold  text-sm mt-4 mb-1">Contributors:</h3>
