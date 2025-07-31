@@ -37,12 +37,6 @@ function App() {
 
   <ProjectShowcase />
 </div>
-
-
-
-
-
-
       </div>
 
       <Footer />

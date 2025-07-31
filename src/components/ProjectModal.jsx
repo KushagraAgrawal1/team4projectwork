@@ -12,7 +12,7 @@ const ProjectModal = ({ project, onClose }) => {
             e.preventDefault();
             onClose();
           }}
-          className="absolute top-1 right-3 bg-[#dee2e6] text-black px-3 py-1 hover:bg-gray-400 rounded-md text-sm"
+          className="absolute top-1 right-3 bg-[#285b8e] text-black px-3 py-1 hover:bg-gray-400 rounded-md text-sm"
         >
           Close
         </a>
@@ -55,7 +55,7 @@ const ProjectModal = ({ project, onClose }) => {
               <h3 className="font-semibold text-sm mb-2">Contributors</h3>
               <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-800">
                 {project.contributors.map((name, idx) => (
-                  <span key={idx} className="bg-orange-200 px-3 py-1 rounded-full">
+                  <span key={idx} className="bg-gray-200 px-3 py-1 rounded-full">
                     {name}
                   </span>
                 ))}
