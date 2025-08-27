@@ -12,7 +12,7 @@ const ProjectModal = ({ project, onClose }) => {
             e.preventDefault();
             onClose();
           }}
-          className="absolute top-1 right-3 bg-[#9426a7] text-black px-3 py-1 hover:bg-violet-400 rounded-md text-sm"
+          className="absolute top-1 right-3 bg-[#00b2a9] text-white px-3 py-1 hover:bg-orange-500 rounded-md text-sm"
         >
           Close
         </a>
