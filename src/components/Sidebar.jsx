@@ -49,7 +49,7 @@ function Sidebar({ isSidebarVisible, setIsSidebarVisible }) {
       }}
       tabIndex={0}
     >
-      {/* Logo only (hamburger hata diya) */}
+      {/* Logo only  */}
       <div className="flex items-center justify-center mb-6">
   <img 
     src={logo} 
